@@ -18,13 +18,26 @@
 	<section class="s1">
 		<div class="main-container">
 			<div class="greeting-wrapper">
-				<h1 id="h1"> Hi, I'm Pujan Shrestha</h1> 
-
+				<h1 id="h1"> ....Pujan Shrestha</h1> 
 			</div>
-	<script src="main.js"></script>
-</h1>
-			</div>
+	<script>
+		var text = document.getElementById("h1");
+var i = 0;
+var t = text.innerText;
+var y = "";
+var des = setInterval(function(){
+y += t[i];
+text.innerHTML = y + '|';
+//text.innerText = y;
+i += 1;
+if (i == t.length){
+clearInterval(des);
+text.innerText = y;
+}
+}, 100)        
 
+
+	</script>
 
 			<div class="intro-wrapper">
 				<div class="nav-wrapper">
